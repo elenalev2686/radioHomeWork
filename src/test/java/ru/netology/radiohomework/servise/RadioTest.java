@@ -170,7 +170,7 @@ public class RadioTest {
     @Test
     public void shouldSetVolume() {
         Radio radio = new Radio();
-        radio.currentVolume = 50;
+        radio.setCurrentVolume(50);
         int expected = 50;
         int actual = radio.getCurrentVolume();
 

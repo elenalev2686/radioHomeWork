@@ -44,7 +44,7 @@ public class Radio {
         currentStationNumber = 9;
     }
 
-    int currentVolume;
+    private int currentVolume;
 
     int getCurrentVolume() {
         return currentVolume;
