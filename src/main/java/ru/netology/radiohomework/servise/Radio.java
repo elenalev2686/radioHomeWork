@@ -20,20 +20,20 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStationNumber <= 9) {
+        if (currentStationNumber != 9) {
             currentStationNumber = currentStationNumber + 1;
         }
-        if (currentStationNumber > 9) {
+        else {
             setFirstStation();
         }
     }
 
     public void prevStation() {
-        if (currentStationNumber <= 9) {
+        if (currentStationNumber != 0) {
             currentStationNumber = currentStationNumber - 1;
 
         }
-        if (currentStationNumber < 0) {
+        else  {
             setLastStation();
         }
     }
