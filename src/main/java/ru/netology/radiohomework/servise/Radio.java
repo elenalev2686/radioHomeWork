@@ -1,15 +1,25 @@
 package ru.netology.radiohomework.servise;
 
 public class Radio {
-    public int currentStationNumber;
-
+    private int currentStationNumber;
+    private int currentVolume;
+    private int lastStation;
+    public Radio() {
+        this.lastStation = 9;
+    }
+    public Radio(int numberOfStation) {
+        this.lastStation = numberOfStation - 1;
+    }
+    public int getLastStation() {
+        return lastStation;
+    }
     public int getCurrentStationNumber() {
         return currentStationNumber;
     }
 
     public void setCurrentStationNumber(int newCurrentStationNumber) {
 
-        if (newCurrentStationNumber > 9) {
+        if (newCurrentStationNumber > lastStation) {
             return;
         }
         if (newCurrentStationNumber < 0) {
@@ -20,10 +30,9 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStationNumber != 9) {
+        if (currentStationNumber != lastStation) {
             currentStationNumber = currentStationNumber + 1;
-        }
-        else {
+        } else {
             setFirstStation();
         }
     }
@@ -32,8 +41,7 @@ public class Radio {
         if (currentStationNumber != 0) {
             currentStationNumber = currentStationNumber - 1;
 
-        }
-        else  {
+        } else {
             setLastStation();
         }
     }
@@ -43,12 +51,9 @@ public class Radio {
     }
 
     public void setLastStation() {
-        currentStationNumber = 9;
+        currentStationNumber = lastStation;
     }
-
-    public int currentVolume;
-
-    public int getCurrentVolume() {
+    int getCurrentVolume() {
         return currentVolume;
     }
 
