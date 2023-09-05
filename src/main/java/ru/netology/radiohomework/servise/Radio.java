@@ -46,7 +46,7 @@ public class Radio {
 
     public int currentVolume;
 
-    public int getCurrentVolume() {
+    int getCurrentVolume() {
         return currentVolume;
     }
 
