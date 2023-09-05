@@ -1,9 +1,9 @@
 package ru.netology.radiohomework.servise;
 
 public class Radio {
-    public int currentStationNumber;
+    private int currentStationNumber;
 
-    public int getCurrentStationNumber() {
+    int getCurrentStationNumber() {
         return currentStationNumber;
     }
 
